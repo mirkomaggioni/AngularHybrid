@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {
+    "angular": "^1.7.9",
+    "angular-filter": "^0.5.17",
+    "angular-odata-resources": "^1.0.0",
+    "angular-ui-router": "^1.0.25",
+    "bootstrap": "^3.3.7",
+    "components-font-awesome": "^5.9.0"
+  }
+}
