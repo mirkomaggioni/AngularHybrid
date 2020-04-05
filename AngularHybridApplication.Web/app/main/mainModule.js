@@ -13,7 +13,7 @@
 
       $stateProvider.state(mainState);
     })
-    .controller('mainCtrl', function ($scope, $state) {
-      $scope.$state = $state;
+    .controller('mainCtrl', function ($state) {
+      this.$state = $state;
     });
 })(window, window.angular)
