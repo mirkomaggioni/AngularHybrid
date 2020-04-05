@@ -244,6 +244,7 @@
   <ItemGroup>
     <Content Include="package.json" />
     <None Include="packages.config" />
+    <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AngularHybridApplication.Core\AngularHybridApplication.Core.csproj">

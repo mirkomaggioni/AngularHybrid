@@ -2,7 +2,9 @@
   "version": "1.0.0",
   "name": "asp.net",
   "private": true,
-  "devDependencies": {},
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  },
   "dependencies": {
     "angular": "^1.7.9",
     "angular-filter": "^0.5.17",
