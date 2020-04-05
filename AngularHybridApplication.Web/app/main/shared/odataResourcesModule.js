@@ -1,7 +1,6 @@
 ﻿(function (window, angular) {
   'use-strict';
   angular.module('odataResourcesModule', ['ui.router', 'ODataResources'])
-
     .factory('odataResource', function ($odataresource, $http, $q) {
 
       function odataResource(serviceRootUrl, resourcePath, key) {
@@ -37,11 +36,11 @@
 
       odataResource.prototype.getResource = function () {
         return this._odataResource.odata();
-      }
+      };
 
       odataResource.prototype.new = function () {
         return new this._odataResource();
-      }
+      };
 
       odataResource.prototype.get = function (id) {
         var defer = $q.defer();
@@ -54,7 +53,7 @@
         });
 
         return defer.promise;
-      }
+      };
 
       odataResource.prototype.add = function (resource) {
         var defer = $q.defer();
@@ -67,7 +66,7 @@
         });
 
         return defer.promise;
-      }
+      };
 
       odataResource.prototype.update = function (resource) {
         var defer = $q.defer();
@@ -82,7 +81,7 @@
         });
 
         return defer.promise;
-      }
+      };
 
       odataResource.prototype.delete = function (resource) {
         var defer = $q.defer();
@@ -94,11 +93,11 @@
         });
 
         return defer.promise;
-      }
+      };
 
       odataResource.prototype.resource = function () {
         return this._odataResource;
-      }
+      };
 
       return odataResource;
     })
@@ -111,11 +110,11 @@
 
       var isEntityProperty = function (propertyName) {
         return (propertyName !== '$promise' && propertyName !== '_originalResource');
-      }
+      };
 
       odataGenericResource.prototype.getOdataResource = function () {
         return this.odataResource.getResource();
-      }
+      };
 
       odataGenericResource.prototype.get = function (id) {
         if (id === '') {
@@ -126,7 +125,7 @@
         } else {
           return this.odataResource.get(id);
         }
-      }
+      };
 
       odataGenericResource.prototype.save = function (resource) {
         if (!resource._originalResource) {
@@ -140,11 +139,11 @@
 
           return defer.promise;
         }
-      }
+      };
 
       odataGenericResource.prototype.delete = function (resource) {
         return this.odataResource.delete(resource);
-      }
+      };
 
       odataGenericResource.prototype.isChanged = function (resource) {
         var isChanged = false;
@@ -155,7 +154,7 @@
         }
 
         return isChanged;
-      }
+      };
 
       odataGenericResource.prototype.getObjectToUpdate = function (resource) {
         var object = this.odataResource.new();
@@ -168,7 +167,7 @@
         }
 
         return object;
-      }
+      };
 
       odataGenericResource.prototype.restore = function (resource) {
         for (var propertyName in resource) {
@@ -178,7 +177,7 @@
         }
 
         return resource;
-      }
+      };
 
       return odataGenericResource;
     });

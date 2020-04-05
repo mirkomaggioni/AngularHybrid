@@ -1,31 +1,33 @@
 ﻿
-<div class="col-lg-10">
-  <button type="button" class="btn btn-primary" ng-click="new()">New</button>
-</div>
+<div ng-controller="blogsCtrl as ctrl">
+  <div class="col-lg-10">
+    <button type="button" class="btn btn-primary" ng-click="ctrl.new()">New</button>
+  </div>
 
-<div class="col-lg-2">
-  <input type="text" class="form-control" placeholder="Search" ng-model="query" required>
-</div>
+  <div class="col-lg-2">
+    <input type="text" class="form-control" placeholder="Search" ng-model="ctrl.query" required>
+  </div>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>
-        Nome
-      </th>
-      <th>
-        Url
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="blog in Blogs | filter: query" ng-click="detail(blog.Id)">
-      <td>
-        {{blog.Name}}
-      </td>
-      <td>
-        {{blog.Url}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          Nome
+        </th>
+        <th>
+          Url
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="blog in ctrl.Blogs | filter: ctrl.query" ng-click="ctrl.detail(blog.Id)">
+        <td>
+          {{blog.Name}}
+        </td>
+        <td>
+          {{blog.Url}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
