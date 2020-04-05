@@ -3,6 +3,7 @@
   "name": "asp.net",
   "private": true,
   "devDependencies": {
+    "@types/angular": "^1.7.0",
     "typescript": "^3.8.3"
   },
   "dependencies": {
