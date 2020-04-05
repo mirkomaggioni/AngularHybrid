@@ -1,31 +1,33 @@
 ﻿
-<div class="col-lg-10">
-  <button type="button" class="btn btn-primary" ng-click="new()">New</button>
-</div>
+<div ng-controller="postsCtrl as ctrl">
+  <div class="col-lg-10">
+    <button type="button" class="btn btn-primary" ng-click="ctrl.new()">New</button>
+  </div>
 
-<div class="col-lg-2">
-  <input type="text" class="form-control" placeholder="Search" ng-model="query" required>
-</div>
+  <div class="col-lg-2">
+    <input type="text" class="form-control" placeholder="Search" ng-model="ctrl.query" required>
+  </div>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>
-        Title
-      </th>
-      <th>
-        Content
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="post in Posts | filter: query" ng-click="detail(post.Id)">
-      <td>
-        {{post.Title}}
-      </td>
-      <td>
-        {{post.Content}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          Title
+        </th>
+        <th>
+          Content
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="post in ctrl.Posts | filter: ctrl.query" ng-click="ctrl.detail(post.Id)">
+        <td>
+          {{post.Title}}
+        </td>
+        <td>
+          {{post.Content}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

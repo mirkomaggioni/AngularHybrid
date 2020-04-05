@@ -17,42 +17,46 @@
             });
       }
     ])
-    .factory('postsService', function ($http, odataGenericResource) {
+    .factory('postsService', function (odataGenericResource) {
       return new odataGenericResource('odata', 'Posts', 'Id');
     })
-    .controller('postsCtrl', function ($scope, $state, postsService) {
-      $scope.new = function () {
+    .controller('postsCtrl', function ($state, postsService) {
+      var vm = this;
+
+      vm.new = function () {
         $state.go("home.post", { id: null });
       };
 
-      $scope.detail = function (id) {
+      vm.detail = function (id) {
         $state.go("home.post", { id: id });
       };
 
-      $scope.Posts = postsService.getOdataResource().query();
+      vm.Posts = postsService.getOdataResource().query();
     })
-    .controller('postsDetailCtrl', function ($scope, $state, $stateParams, postsService, blogsService) {
+    .controller('postsDetailCtrl', function ($state, postsService, blogsService) {
+      var vm = this;
+
       var load = function (id) {
-        $scope.Blogs = blogsService.getOdataResource().query();
+        vm.Blogs = blogsService.getOdataResource().query();
 
         postsService.get(id).then(function (data) {
-          $scope.Post = data;
+          vm.Post = data;
         });
       };
 
-      $scope.save = function () {
-        postsService.save($scope.Post).then(function (data) {
+      vm.save = function () {
+        postsService.save(vm.Post).then(function (data) {
           load(data.Id);
         });
       };
 
-      $scope.delete = function () {
-        blogsService.delete($scope.Post).then(function () {
-          $scope.close();
+      vm.delete = function () {
+        blogsService.delete(vm.Post).then(function () {
+          vm.close();
         });
-      }
+      };
 
-      $scope.close = function () {
+      vm.close = function () {
         $state.go("home.posts");
       };
 
