@@ -222,9 +222,12 @@
     <TypeScriptCompile Include="app\app.ts" />
     <Content Include="app\main\blogs\blog.html" />
     <Content Include="app\main\blogs\blogs.html" />
+    <TypeScriptCompile Include="app\main\blogs\blogController.ts" />
+    <TypeScriptCompile Include="app\main\blogs\blogsController.ts" />
     <TypeScriptCompile Include="app\main\blogs\blogsModule.ts" />
     <Content Include="app\main\header.html" />
     <Content Include="app\main\main.html" />
+    <TypeScriptCompile Include="app\main\blogs\blogsService.ts" />
     <TypeScriptCompile Include="app\main\mainModule.ts" />
     <Content Include="app\main\posts\post.html" />
     <Content Include="app\main\posts\posts.html" />

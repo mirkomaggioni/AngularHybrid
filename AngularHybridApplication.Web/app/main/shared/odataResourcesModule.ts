@@ -1,16 +1,10 @@
-﻿import * as angular from "angular";
-import { OdataResource, IResource } from './OdataResource';
+﻿import { OdataResource, IResource } from './OdataResource';
 
-class OdataGenericResource extends OdataResource {
-  constructor($http: ng.IHttpService) { super($http); }
-
-  getOdataResource(resourcePath: string) {
+export class OdataGenericResource extends OdataResource {
+  resourcePath: string;
+  constructor($http: ng.IHttpService, resourcePath: string) {
+    super($http);
     this.resourcePath = resourcePath;
-    return this;
-  }
-
-  get(id: string) {
-    return this.detail(id);
   }
 
   save(resource: IResource) {
@@ -20,10 +14,6 @@ class OdataGenericResource extends OdataResource {
       var object = this.getObjectToUpdate(resource);
       return this.save(object);
     }
-  }
-
-  delete(id: string) {
-    return this.delete(id);
   }
 
   isChanged(resource: IResource) {
@@ -55,6 +45,3 @@ class OdataGenericResource extends OdataResource {
     return object;
   };
 }
-
-export const serviziModule = angular.module('odataResourcesModule', ['ui.router'])
-  .factory('odataGenericResource', OdataGenericResource);
