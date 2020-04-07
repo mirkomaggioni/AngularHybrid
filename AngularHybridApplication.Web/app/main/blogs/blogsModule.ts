@@ -1,6 +1,6 @@
 ﻿import * as angular from 'angular';
 import { BlogsService } from './blogsService';
-import { BlogsController } from './BlogsController';
+import { BlogsController } from './blogsController';
 import BlogController from './blogController';
 
 export const blogsModule = angular.module('blogsModule', ['ui.router'])
@@ -16,7 +16,7 @@ export const blogsModule = angular.module('blogsModule', ['ui.router'])
         {
           url: '/blog/:id',
           templateUrl: 'app/main/blogs/blog.html',
-          controller: 'blogsDetailCtrl'
+          controller: 'blogCtrl'
         });
   })
   .factory('blogsService', BlogsService)

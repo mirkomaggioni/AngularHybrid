@@ -231,7 +231,10 @@
     <TypeScriptCompile Include="app\main\mainModule.ts" />
     <Content Include="app\main\posts\post.html" />
     <Content Include="app\main\posts\posts.html" />
+    <TypeScriptCompile Include="app\main\posts\postController.ts" />
+    <TypeScriptCompile Include="app\main\posts\postsController.ts" />
     <TypeScriptCompile Include="app\main\posts\postsModule.ts" />
+    <TypeScriptCompile Include="app\main\posts\postsService.ts" />
     <TypeScriptCompile Include="app\main\shared\odataResource.ts" />
     <TypeScriptCompile Include="app\main\shared\odataResourcesModule.ts" />
     <Content Include="app\main\shared\ui-select.html" />
