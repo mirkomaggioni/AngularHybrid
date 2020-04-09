@@ -220,9 +220,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="webpack.config.js" />
-    <TypeScriptCompile Include="app\app.ts" />
+    <TypeScriptCompile Include="app\angularjsAppModule.ts" />
     <Content Include="app\main\blogs\blog.html" />
     <Content Include="app\main\blogs\blogs.html" />
+    <TypeScriptCompile Include="app\angularAppModule.ts" />
     <TypeScriptCompile Include="app\main\blogs\blogController.ts" />
     <TypeScriptCompile Include="app\main\blogs\blogsController.ts" />
     <TypeScriptCompile Include="app\main\blogs\blogsModule.ts" />
