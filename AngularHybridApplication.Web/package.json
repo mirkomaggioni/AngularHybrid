@@ -23,7 +23,7 @@
     "@uirouter/visualizer": "^6.0.2",
     "angular": "^1.7.9",
     "angular-filter": "^0.5.17",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "components-font-awesome": "^5.9.0",
     "rxjs": "^6.5.4",
     "rxjs-compat": "^6.5.4",
