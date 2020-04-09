@@ -11,7 +11,7 @@ import angularjsAppModule from './angularjsAppModule'
     UIRouterUpgradeModule.forRoot()
   ]
 })
-export class BootstrapModule {
+export class AngularAppModule {
   constructor(private upgrade: UpgradeModule) { }
   ngDoBootstrap() {
     console.log("Angularjs Module Launch");
