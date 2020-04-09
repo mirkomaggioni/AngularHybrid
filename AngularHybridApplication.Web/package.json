@@ -1,10 +1,18 @@
 {
   "version": "1.0.0",
-  "name": "asp.net",
+  "name": "angular.hibrid.app",
   "private": true,
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "webpack-dev-server --open --progress"
+  },
   "devDependencies": {
+    "@ngtools/webpack": "^9.1.1",
     "@types/angular": "^1.7.0",
-    "typescript": "^3.8.3",
+    "codelyzer": "^5.2.1",
+    "shx": "^0.3.2",
+    "source-map-loader": "^0.2.4",
+    "typescript": "3.4.5",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"

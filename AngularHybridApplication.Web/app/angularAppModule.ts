@@ -14,7 +14,7 @@ import angularjsAppModule from './angularjsAppModule'
 export class AngularAppModule {
   constructor(private upgrade: UpgradeModule) { }
   ngDoBootstrap() {
-    console.log("Angularjs Module Launch");
+    console.log("Angular Module Launch");
     this.upgrade.bootstrap(document.body, [angularjsAppModule]);
   }
 }
