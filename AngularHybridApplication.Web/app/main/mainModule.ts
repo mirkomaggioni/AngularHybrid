@@ -3,7 +3,6 @@ import MainController from './mainController';
 
 export const mainModule = angular.module('mainModule', ['ui.router'])
   .config(function ($stateProvider) {
-    console.log("Angularjs Main Module Launch");
     var mainState = {
       name: 'home',
       url: '/home',
