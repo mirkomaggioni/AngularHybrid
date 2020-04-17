@@ -7,8 +7,8 @@
     "serve": "webpack-dev-server --open --progress"
   },
   "devDependencies": {
-    "@ngtools/webpack": "^9.1.1",
-    "@types/angular": "^1.7.0",
+    "@ngtools/webpack": "^9.0.6",
+    "@types/angular": "^1.6.57",
     "codelyzer": "^5.2.1",
     "shx": "^0.3.2",
     "source-map-loader": "^0.2.4",
@@ -27,7 +27,7 @@
     "@angular/platform-browser-dynamic": "^8.2.9",
     "@angular/router": "^8.2.9",
     "@angular/upgrade": "^8.2.9",
-    "@uirouter/angular-hybrid": "9.0.0",
+    "@uirouter/angular-hybrid": "^9.0.0",
     "@uirouter/visualizer": "^6.0.2",
     "angular": "^1.7.9",
     "angular-filter": "^0.5.17",
