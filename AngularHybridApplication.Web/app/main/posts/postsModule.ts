@@ -19,6 +19,6 @@ export const postsModule = angular.module('postsModule', ['ui.router'])
           controller: 'postCtrl'
         });
   })
-  .factory('blogsService', PostsService)
+  .factory('postsService', PostsService)
   .controller('postsCtrl', PostsController)
   .controller('postCtrl', PostController);
