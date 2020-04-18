@@ -5,9 +5,10 @@ import { BlogsService } from './blogsService';
 export class BlogsController {
   public Blogs: Array<IResource>;
 
-  constructor(private $state: StateService, private blogsService: BlogsService) {
+  constructor(private $state: StateService, private blogsService: BlogsService, private $http: ng.IHttpService) {
+    var vm = this;
     this.blogsService.list().then(function (result) {
-      this.Blogs = result.data;
+      vm.Blogs = result.data["value"];
     });
   }
   new() {

@@ -6,8 +6,9 @@ export class PostsController {
   public Posts: Array<IResource>;
 
   constructor(private $state: StateService, private postsService: PostsService) {
+    var vm = this;
     this.postsService.list().then(function (result) {
-      this.Posts = result.data;
+      vm.Posts = result.data["value"];
     });
   }
   new() {
