@@ -45,5 +45,15 @@ module.exports = {
 
   externals: {
     angular: 'angular'
+  },
+
+  devServer: {
+    proxy: [
+      {
+        context: ['/odata', '/api'],
+        target: 'http://localhost:8092/',
+        secure: false
+      }
+    ]
   }
 };
