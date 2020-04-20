@@ -1,4 +1,5 @@
 ﻿var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var AngularCompilerPlugin = require('@ngtools/webpack').AngularCompilerPlugin;
 var path = require('path');
@@ -33,6 +34,10 @@ module.exports = {
       "tsConfigPath": 'tsconfig.json',
       "mainPath": 'app/bootstrap.ts',
       "sourceMap": true
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './index.html'
     })
   ],
 

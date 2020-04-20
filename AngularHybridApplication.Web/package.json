@@ -10,6 +10,7 @@
     "@ngtools/webpack": "^9.0.6",
     "@types/angular": "^1.6.57",
     "codelyzer": "^5.2.1",
+    "html-webpack-plugin": "^4.2.0",
     "shx": "^0.3.2",
     "source-map-loader": "^0.2.4",
     "typescript": "3.4.5",
