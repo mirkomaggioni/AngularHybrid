@@ -5,12 +5,14 @@ import { BlogsService } from './blogsService';
 export default class BlogController {
   public Blog: IResource;
 
+  static $inject = ['$state', '$stateParams', 'blogsService'];
   constructor(private $state: StateService, private $stateParams: StateParams, private blogsService: BlogsService) {
+    var vm = this;
     if ($stateParams.id === '') {
-      this.Blog = <IResource>{};
+      vm.Blog = <IResource>{};
     } else {
       blogsService.detail($stateParams.id).then(function (result) {
-        this.Blog = result.data;
+        vm.Blog = result.data as IResource;
       });
     }
   }

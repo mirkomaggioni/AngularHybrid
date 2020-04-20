@@ -7,16 +7,18 @@ export default class PostController {
   public Blogs: Array<IResource>;
   public Post: IResource;
 
+  static $inject = ['$state', '$stateParams', 'postsService', 'blogsService'];
   constructor(private $state: StateService, private $stateParams: StateParams, private postsService: PostsService, private blogsService: BlogsService) {
+    var vm = this;
     blogsService.list().then(function (result) {
-      this.Blogs = result.data;
+      vm.Blogs = result.data["value"];
     });
 
     if ($stateParams.id === '') {
-      this.Post = <IResource>{};
+      vm.Post = <IResource>{};
     } else {
       postsService.detail($stateParams.id).then(function (result) {
-        this.Post = result.data;
+        vm.Post = result.data as IResource;
       });
     }
   }

@@ -5,6 +5,7 @@ import { PostsService } from './postsService';
 export class PostsController {
   public Posts: Array<IResource>;
 
+  static $inject = ['$state', 'postsService'];
   constructor(private $state: StateService, private postsService: PostsService) {
     var vm = this;
     this.postsService.list().then(function (result) {
