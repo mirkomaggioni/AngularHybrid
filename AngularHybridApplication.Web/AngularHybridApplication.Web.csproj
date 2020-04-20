@@ -244,7 +244,7 @@
     <Content Include="app\main\shared\ui-select.html" />
     <TypeScriptCompile Include="app\main\shared\uiModule.ts" />
     <Content Include="favicon.ico" />
-    <Content Include="index.html" />
+    <Content Include="index.template.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

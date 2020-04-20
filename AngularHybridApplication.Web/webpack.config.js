@@ -16,8 +16,7 @@ module.exports = {
   devtool: DEV ? 'eval' : 'source-map',
 
   output: {
-    path: path.join(__dirname, "_bundles"),
-    publicPath: '_bundles/',
+    path: path.resolve(__dirname, "transpiled"),
     filename: "[name].js"
   },
 
@@ -26,8 +25,10 @@ module.exports = {
   },
 
   optimization: {
-    splitChunks: { chunks: 'all', },
+    splitChunks: { chunks: 'all', }
   },
+
+  watch: true,
 
   plugins: [
     new AngularCompilerPlugin({
@@ -37,7 +38,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       hash: true,
-      template: './index.html'
+      template: './index.template.html',
+      filename: '../index.html'
     })
   ],
 

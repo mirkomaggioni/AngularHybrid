@@ -21,6 +21,7 @@
 x64/
 x86/
 transpiled/
+_bundles/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
