@@ -4,7 +4,7 @@ import { BlogsController } from './blogsController';
 import BlogController from './blogController';
 
 export const blogsModule = angular.module('blogsModule', ['ui.router'])
-  .config(function ($stateProvider) {
+  .config(['$stateProvider', function ($stateProvider) {
     $stateProvider
       .state('home.blogs',
         {
@@ -18,7 +18,7 @@ export const blogsModule = angular.module('blogsModule', ['ui.router'])
           templateUrl: 'app/main/blogs/blog.html',
           controller: 'blogCtrl'
         });
-  })
+  }])
   .factory('blogsService', BlogsService)
   .controller('blogsCtrl', BlogsController)
   .controller('blogCtrl', BlogController);

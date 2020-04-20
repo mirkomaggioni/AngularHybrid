@@ -2,7 +2,7 @@
 import MainController from './mainController';
 
 export const mainModule = angular.module('mainModule', ['ui.router'])
-  .config(function ($stateProvider) {
+  .config(['$stateProvider', function ($stateProvider) {
     var mainState = {
       name: 'home',
       url: '/home',
@@ -13,5 +13,5 @@ export const mainModule = angular.module('mainModule', ['ui.router'])
     };
 
     $stateProvider.state(mainState);
-  })
+  }])
   .controller('mainCtrl', MainController);

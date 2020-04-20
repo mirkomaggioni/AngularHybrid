@@ -6,7 +6,7 @@ import { uiModule } from './main/shared/uiModule';
 import { upgradeModule } from '@uirouter/angular-hybrid';
 
 export default angular.module('angularjsApp', ['ui.router', mainModule.name, blogsModule.name, postsModule.name, uiModule.name, upgradeModule.name])
-  .config(function ($urlRouterProvider, $locationProvider) {
+  .config(['$urlRouterProvider', '$locationProvider', function ($urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/home/blogs');
     $locationProvider.hashPrefix('');
-  }).name;
+  }]).name;

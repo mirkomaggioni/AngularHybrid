@@ -4,7 +4,7 @@ import { PostsController } from './postsController';
 import PostController from './postController';
 
 export const postsModule = angular.module('postsModule', ['ui.router'])
-  .config(function ($stateProvider) {
+  .config(['$stateProvider', function ($stateProvider) {
     $stateProvider
       .state('home.posts',
         {
@@ -18,7 +18,7 @@ export const postsModule = angular.module('postsModule', ['ui.router'])
           templateUrl: 'app/main/posts/post.html',
           controller: 'postCtrl'
         });
-  })
+  }])
   .factory('postsService', PostsService)
   .controller('postsCtrl', PostsController)
   .controller('postCtrl', PostController);
