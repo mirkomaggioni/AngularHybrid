@@ -45,7 +45,17 @@ module.exports = {
   module: {
     rules: [
       { test: /\.tsx?$/, use: ["source-map-loader"], enforce: 'pre' },
-      { test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/, use: ["@ngtools/webpack"] }
+      { test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/, use: ["@ngtools/webpack"] },
+      {
+        test: /\.ts$/,
+        loaders: ['awesome-typescript-loader', 'angular2-template-loader?keepUrl=true'],
+        exclude: [/\.(spec|e2e)\.ts$/]
+      },
+      {
+        test: /\.(html|css)$/,
+        loader: 'raw-loader',
+        exclude: /\.async\.(html|css)$/
+      }
     ]
   },
 
