@@ -219,6 +219,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\main\pages\pages.html" />
     <Content Include="webpack.config.js" />
     <TypeScriptCompile Include="app\angularjsAppModule.ts" />
     <Content Include="app\main\blogs\blog.html" />

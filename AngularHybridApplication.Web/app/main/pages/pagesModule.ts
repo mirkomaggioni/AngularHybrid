@@ -6,7 +6,6 @@ import { PagesComponent } from "./pagesComponent";
 
 export let CONTACTS_STATES = [
   {
-    //parent: 'home',
     name: "home.pages",
     url: "/pages",
     component: PagesComponent

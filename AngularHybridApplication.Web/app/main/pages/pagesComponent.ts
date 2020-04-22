@@ -1,7 +1,10 @@
 ﻿import { Component } from '@angular/core';
+import { IResource } from '../shared/OdataResource';
 
 @Component({
   selector: 'pages-component',
-  template: '<div>Hello</div>'
+  templateUrl: 'pages.html'
 })
-export class PagesComponent {}
+export class PagesComponent {
+  public Pages: Array<IResource>;
+}
