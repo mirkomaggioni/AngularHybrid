@@ -24,10 +24,6 @@ module.exports = {
     extensions: ['.js', '.ts']
   },
 
-  optimization: {
-    splitChunks: { chunks: 'all', }
-  },
-
   watch: true,
 
   plugins: [
@@ -35,6 +31,9 @@ module.exports = {
       "tsConfigPath": 'tsconfig.json',
       "mainPath": 'app/bootstrap.ts',
       "sourceMap": true
+    }),
+    new webpack.optimize.LimitChunkCountPlugin({
+      maxChunks: 1
     }),
     new HtmlWebpackPlugin({
       hash: true,
