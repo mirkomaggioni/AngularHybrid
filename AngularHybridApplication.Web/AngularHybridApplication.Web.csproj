@@ -235,6 +235,8 @@
     <TypeScriptCompile Include="app\main\mainModule.ts" />
     <Content Include="app\main\posts\post.html" />
     <Content Include="app\main\posts\posts.html" />
+    <TypeScriptCompile Include="app\main\pages\pagesComponent.ts" />
+    <TypeScriptCompile Include="app\main\pages\pagesModule.ts" />
     <TypeScriptCompile Include="app\main\posts\postController.ts" />
     <TypeScriptCompile Include="app\main\posts\postsController.ts" />
     <TypeScriptCompile Include="app\main\posts\postsModule.ts" />
@@ -267,6 +269,7 @@
       <Name>AngularHybridApplication.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

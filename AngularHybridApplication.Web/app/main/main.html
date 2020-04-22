@@ -12,6 +12,12 @@
         Posts
       </a>
     </li>
+    <li role="presentation" ng-class="{active: ctrl.$state.includes('home.pages') || ctrl.$state.includes('home.page')}">
+      <a ui-sref="home.pages">
+        <i class="fa fa-ticket"></i>
+        Pages
+      </a>
+    </li>
   </ul>
 </div>
 <div class="col-lg-10">

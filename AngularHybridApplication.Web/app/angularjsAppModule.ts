@@ -5,8 +5,10 @@ import { postsModule } from './main/posts/postsModule';
 import { uiModule } from './main/shared/uiModule';
 import { upgradeModule } from '@uirouter/angular-hybrid';
 
-export default angular.module('angularjsApp', ['ui.router', mainModule.name, blogsModule.name, postsModule.name, uiModule.name, upgradeModule.name])
+export const angularjsAppModule = angular.module('angularjsApp', ['ui.router', mainModule.name, blogsModule.name, postsModule.name, uiModule.name, upgradeModule.name])
   .config(['$urlRouterProvider', '$locationProvider', function ($urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/home/blogs');
     $locationProvider.hashPrefix('');
-  }]).name;
+  }]);
+
+
